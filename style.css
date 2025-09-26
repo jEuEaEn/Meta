@@ -6,7 +6,7 @@ html{
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    color: white;
+    color: #fdfdfd;
     background-color: aqua;
     text-align: center;
 }   
@@ -16,6 +16,7 @@ html{
 body{
 
     margin: 0px;
+    width: 100%;
 
 }
 
@@ -82,43 +83,35 @@ p{
 
 }
 
-.UP{
-
+.UP {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
+    justify-content: space-between; 
     font-size: 12px;
     width: 100%;
+    padding: 0 40px; 
+    box-sizing: border-box;
+    position: relative;
+    z-index: 4;
+}
+
+.IZQ, .DER {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+a {
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+
+
+.meta, .globe{
     
-}
-
-.IZQ{
-
     display: flex;
     align-items: center;
-
-}
-
-.DER{
-
-    display: flex;
-    align-items: center;
-
-}
-
-.meta{
-    
-    display: flex;
-    align-items: center;
-
-}
-
-a{
-
-    margin: 0px;
-    margin-right: 10px;
-
 
 }
 
