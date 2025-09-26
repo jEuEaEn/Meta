@@ -2,8 +2,16 @@ html{
 
     height: 100vh;
     width: 100%;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    background-color: aqua;
+    text-align: center;
+}   
 
-}
+
 
 body{
 
@@ -13,15 +21,28 @@ body{
 
 
 
-.Video video{
-    
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    margin: 0;
-    
+.Video video {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  margin: 0;
+  position: relative;
+  z-index: 1; /* el video debajo */
 }
+
+.Video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px; /* controla hasta dónde baja el degradado */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
+  pointer-events: none;
+  z-index: 2;
+}
+
 
 .Video{
     
@@ -31,6 +52,8 @@ body{
     align-items: center;
     justify-content: center;
     margin: 0px;
+    
+    
 
 }
 
@@ -43,15 +66,102 @@ body{
     position: absolute;
     top: 0;
     margin: 0px;
+    z-index: 3;
 
 }
 
 h1{
 
-    color: white;
     font-size: 50px;
 
 }
 
+p{
+
+    width: 490px;
+
+}
+
+.UP{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    font-size: 12px;
+    width: 100%;
+    
+}
+
+.IZQ{
+
+    display: flex;
+    align-items: center;
+
+}
+
+.DER{
+
+    display: flex;
+    align-items: center;
+
+}
+
+.meta{
+    
+    display: flex;
+    align-items: center;
+
+}
+
+a{
+
+    margin: 0px;
+    margin-right: 10px;
 
 
+}
+
+button{
+
+    border: 0px;
+    border-radius: 20px;
+    height: 40px;
+
+}
+
+.info{
+
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    color: white;
+    background-color: #0064e0
+
+}
+
+.Compra{
+
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.i23X23{
+
+    width: 23px;
+    height: 23px;
+
+}
+
+.i32X32{
+
+    width: 32px;
+    height: 32px;
+    margin-left: 2px;
+
+}
